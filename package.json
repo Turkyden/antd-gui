@@ -1,0 +1,80 @@
+{
+  "name": "react-darkreader",
+  "version": "1.5.5",
+  "description": "A React Hook for adding a dark / night mode to your site inspired by darkreader",
+  "keywords": [
+    "react",
+    "react-component",
+    "react-darkreader",
+    "darkreader",
+    "darkmode"
+  ],
+  "authors": {
+    "name": "Turkyden",
+    "email": "wj871287@gmail.com"
+  },
+  "homepage": "http://github.com/Turkyden/react-darkreader",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Turkyden/react-darkreader.git"
+  },
+  "bugs": {
+    "url": "http://github.com/Turkyden/react-darkreader/issues"
+  },
+  "license": "MIT",
+  "scripts": {
+    "start": "dumi dev",
+    "docs:build": "dumi build",
+    "docs:deploy": "gh-pages -d docs-dist",
+    "build": "father-build",
+    "deploy": "npm run docs:build && npm run docs:deploy",
+    "release": "npm run build && npm publish",
+    "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "lib",
+    "es",
+    "package.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "dependencies": {
+    "darkreader": "^4.9.26",
+    "react-switch": "^6.0.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/react-hooks": "^5.0.3",
+    "@types/jest": "^26.0.20",
+    "@umijs/test": "^3.0.5",
+    "antd": "^4.12.3",
+    "dumi": "^1.0.10",
+    "father-build": "^1.17.2",
+    "gh-pages": "^3.0.0",
+    "husky": "^5.1.1",
+    "lint-staged": "^10.0.7",
+    "prettier": "^1.19.1",
+    "yorkie": "^2.0.0"
+  }
+}
