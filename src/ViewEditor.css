@@ -1,0 +1,18 @@
+.viewEditor {
+  position: fixed;
+  pointer-events: none;
+}
+
+.viewEditor-title {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 0 1rem;
+  pointer-events: all;
+  cursor: pointer;
+  user-select: none;
+}
+
+.viewEditor-title:hover {
+  background-color: rgba(47, 84, 235, 0.8);
+}

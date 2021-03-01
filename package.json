@@ -1,25 +1,26 @@
 {
-  "name": "react-darkreader",
-  "version": "1.5.5",
+  "name": "ant-desgin-gui",
+  "version": "1.0.0",
   "description": "A React Hook for adding a dark / night mode to your site inspired by darkreader",
   "keywords": [
     "react",
     "react-component",
-    "react-darkreader",
-    "darkreader",
-    "darkmode"
+    "ant-desgin-gui",
+    "gui",
+    "gui-editor",
+    "hooks"
   ],
   "authors": {
     "name": "Turkyden",
     "email": "wj871287@gmail.com"
   },
-  "homepage": "http://github.com/Turkyden/react-darkreader",
+  "homepage": "http://github.com/Turkyden/ant-desgin-gui",
   "repository": {
     "type": "git",
-    "url": "git@github.com:Turkyden/react-darkreader.git"
+    "url": "git@github.com:Turkyden/ant-desgin-gui.git"
   },
   "bugs": {
-    "url": "http://github.com/Turkyden/react-darkreader/issues"
+    "url": "http://github.com/Turkyden/ant-desgin-gui/issues"
   },
   "license": "MIT",
   "scripts": {
@@ -56,7 +57,10 @@
     ]
   },
   "dependencies": {
+    "@reach/rect": "^0.13.2",
+    "ahooks": "^2.9.6",
     "darkreader": "^4.9.26",
+    "leva": "^0.4.4",
     "react-switch": "^6.0.0"
   },
   "peerDependencies": {

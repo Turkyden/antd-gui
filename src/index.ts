@@ -1,5 +1,4 @@
-import Darkreader from './Darkreader';
+import ViewEditor from './ViewEditor';
 
-export { default as Switch } from './Switch';
-export { default as useDarkreader } from './useDarkreader';
-export default Darkreader;
+export { default as ViewEditor } from './ViewEditor';
+export default ViewEditor;
