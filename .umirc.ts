@@ -1,7 +1,7 @@
 import { defineConfig } from 'dumi';
 
 export default defineConfig({
-  title: 'rc-darkreader',
+  title: 'antd-gui',
   logo: 'https://darkreader.org/images/darkreader-icon-256x256.png',
   favicon: 'https://darkreader.org/images/darkreader-icon-256x256.png',
   hash: true,
@@ -9,7 +9,7 @@ export default defineConfig({
   base: `/`,
   publicPath: '/',
   theme: {
-    '@c-primary': '#2c89a0',
+    '@c-primary': '#1890ff',
   },
   headScripts: [
     `window.onload = () => {
@@ -27,7 +27,7 @@ export default defineConfig({
       height: 64px;
       position: relative;
       perspective: 50000px;
-      color: #2c89a0;
+      color: #1890ff;
     }
     .circles span {
       position: absolute;

@@ -1,14 +1,16 @@
-## Darkreader
+## ViewEditor
 
 You can import to your app with default export.
 
 ```tsx
+/**
+ * defaultShowCode: true
+ */
 import React from 'react';
 import { Layout, Menu, Breadcrumb } from 'antd';
-import ViewEditor from 'ant-design-gui';
+import { ViewEditor } from 'antd-gui';
 import { useControls } from 'leva';
 import 'antd/dist/antd.css';
-import './styles.css';
 
 const { Header, Content, Footer } = Layout;
 
@@ -49,23 +51,23 @@ export default () => {
         </Footer>
       </Layout>
       <style>{`
-        .viewEditor {
-          position: fixed;
-          pointer-events: none;
+        .site-layout-content {
+          min-height: 280px;
+          padding: 24px;
+          background: #fff;
+          font-family: sans-serif;
+          text-align: center;
         }
-
-        .viewEditor-title {
-          position: fixed;
-          background-color: rgba(0, 0, 0, 0.5);
-          color: #fff;
-          padding: 0 1rem;
-          pointer-events: all;
-          cursor: pointer;
-          user-select: none;
+        #components-layout-demo-top .logo {
+          float: left;
+          width: 120px;
+          height: 31px;
+          margin: 16px 24px 16px 0;
+          background: rgba(255, 255, 255, 0.3);
         }
-
-        .viewEditor-title:hover {
-          background-color: rgba(47, 84, 235, 0.8);
+        .ant-row-rtl #components-layout-demo-top .logo {
+          float: right;
+          margin: 16px 0 16px 24px;
         }
       `}</style>
     </>

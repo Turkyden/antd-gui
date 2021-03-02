@@ -1,11 +1,11 @@
 {
-  "name": "ant-desgin-gui",
+  "name": "antd-gui",
   "version": "1.0.0",
   "description": "A React Hook for adding a dark / night mode to your site inspired by darkreader",
   "keywords": [
     "react",
     "react-component",
-    "ant-desgin-gui",
+    "ant-design",
     "gui",
     "gui-editor",
     "hooks"
@@ -14,13 +14,13 @@
     "name": "Turkyden",
     "email": "wj871287@gmail.com"
   },
-  "homepage": "http://github.com/Turkyden/ant-desgin-gui",
+  "homepage": "http://github.com/Turkyden/antd-gui",
   "repository": {
     "type": "git",
-    "url": "git@github.com:Turkyden/ant-desgin-gui.git"
+    "url": "git@github.com:Turkyden/antd-gui.git"
   },
   "bugs": {
-    "url": "http://github.com/Turkyden/ant-desgin-gui/issues"
+    "url": "http://github.com/Turkyden/antd-gui/issues"
   },
   "license": "MIT",
   "scripts": {
