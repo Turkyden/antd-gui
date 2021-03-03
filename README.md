@@ -38,66 +38,18 @@ You can import the darkmode as a react component.
 
 ```tsx | pure
 import React from 'react';
-import Darkreader from 'antd-gui';
-
-export default () => <Darkreader />;
-```
-
-You can also create darkmode by the react hook `useDarkreader`
-
-```tsx | pure
-import React from 'react';
-import { Switch, useDarkreader } from 'antd-gui';
+import { useControls } from 'antd-gui';
 
 export default () => {
-  const [isDark, { toggle }] = useDarkreader(false);
+  const { name, aNumber } = useControls({ name: 'World', aNumber: 0 });
 
-  return <Switch checked={isDark} onChange={toggle} />;
+  return (
+    <div>
+      Hey {name}, hello! {aNumber}
+    </div>
+  );
 };
 ```
-
-## 📔 API
-
-### Component
-
-```tsx | pure
-<Darkreader
-  defaultDarken
-  theme={/** Theme options **/}
-  fixes={/** Contains fixes for the generated theme **/}
-  onChange={isDark => {
-    /** Callback for change **/
-  }}
-/>
-```
-
-### Hook
-
-```typescript | pure
-const [isDark, { toggle, collectCSS }] = useDarkreader(defaultDarken, theme?, fixes?)
-```
-
-with a toggle button as ui.
-
-```tsx | pure
-<Switch checked={isDark} onChange={toggle} />
-```
-
-### Result
-
-| Params     | Description                                             | Type                          |
-| ---------- | ------------------------------------------------------- | ----------------------------- |
-| isDark     | The status of current darkmode, support `true`, `false` | `boolean`                     |
-| toggle     | The function for toggling the darkmode.                 | `() => void`                  |
-| collectCSS | The async function for collecting the css of darkmode.  | `async () => Promise<string>` |
-
-### Params
-
-| Params        | Description                                                                                                                                                                   | Type              | Default |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- | ------- |
-| defaultDarken | The default status of the darkreader                                                                                                                                          | `boolean`         | false   |
-| theme         | The options of darkreader Theme [refered to index.d.ts &rarr;](https://github.com/darkreader/darkreader/blob/13c93a995cde0b933580174106897bb1d13f53b4/index.d.ts#L41)         | `Partial<Theme>`  | -       |
-| fixes         | Contains fixes for the generated theme [refered to index.d.ts &rarr;](https://github.com/darkreader/darkreader/blob/13c93a995cde0b933580174106897bb1d13f53b4/index.d.ts#L121) | `DynamicThemeFix` | -       |
 
 ## 🔢 Coming Soon
 
@@ -132,12 +84,6 @@ Build library via `father-build`,
 $ npm run build
 ```
 
-## 🥇 Who is using
-
-| [Ant Design Pro Components Light](https://procomponents.ant.design/) | [Ant Design Pro Components Dark](https://procomponents.ant.design/) |
-| :------------------------------------------------------------------: | :-----------------------------------------------------------------: |
-|    ![Procomponents Light](./screenshot/pro-components_light.png)     |     ![Procomponents Dark](./screenshot/pro-components_dark.png)     |
-
 ## ❤️ Contributors
 
 Thanks goes to these people (emoji key):
@@ -149,12 +95,6 @@ Thanks goes to these people (emoji key):
         <img src="https://avatars0.githubusercontent.com/u/24560160?s=460&u=36a6072b8220e6ad7c0c7f7dbf97cc3dd796a8d0&v=4" width="100px;" alt=""/><br />
         <sub><b>Turkyden</b></sub></a><br />
         💻📖🚇⚠️
-    </td>
-    <td align="center">
-      <a href="https://github.com/chenshuai2144">
-        <img src="https://avatars.githubusercontent.com/u/8186664?s=460&u=a583e7221b1be534d587185223cab48fe47cb74d&v=4" width="100px;" alt=""/><br />
-        <sub><b>chenshuai2144</b></sub></a><br />
-        💻🚇⚠️
     </td>
     <td align="center">
       <a href="https://github.com/KnowsCount">
