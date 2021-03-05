@@ -1,7 +1,9 @@
-import React, { useRef } from 'react';
+import React, { useRef, CSSProperties } from 'react';
 import { useRect } from '@reach/rect';
 import { useHover } from 'ahooks';
 import './ViewEditor.css';
+
+type Visibility = 'visible' | 'hidden' | 'collapse'
 
 export interface ViewEditorProps {
   onClick: (event: React.MouseEvent) => void;
@@ -23,7 +25,7 @@ export default ({
   const isViewEditorTitleHovering = useHover(viewEditorTitleRef);
 
   const viewEditorStyle = {
-    visibility: disabled ? 'hidden' : 'visible',
+    visibility: disabled ? 'hidden' : 'visible' as Visibility,
     width: rect?.width,
     height: rect?.height,
     top: rect?.top,

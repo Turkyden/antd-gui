@@ -35,13 +35,12 @@ function isFunction(fn: Function) {
 export default function middleware(
   com: ReactElement,
   name: string,
-): ForwardRefExoticComponent<RefAttributes<any>> {
-  debugger;
+): ForwardRefExoticComponent<RefAttributes<any>> | ReactElement {
 
   const overwriteInRender =
     window.pcComponentsConfig && window.pcComponentsConfig[name];
 
-  let result = com;
+  let result;
 
   if (overwriteInRender) {
     result = React.forwardRef((props, ref) => {
@@ -62,8 +61,10 @@ export default function middleware(
         }
       }
 
-      return React.createElement(com, { ...newProps, ref });
+      return React.createElement(com as any, { ...newProps, ref });
     });
+  }else{
+    result = com;
   }
 
   return result;

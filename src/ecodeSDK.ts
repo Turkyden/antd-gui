@@ -6,8 +6,8 @@ window.ecodeSDK = {
     for (let k in map) {
       if (!window.pcComponentsConfig[k]) window.pcComponentsConfig[k] = {};
       window.pcComponentsConfig[k]['overwritePropsFn'] = function(
-        newProps,
-        name,
+        newProps: any,
+        name: string,
       ) {
         var objMap = map[name];
         if (objMap && objMap.queue) {
@@ -27,7 +27,7 @@ window.ecodeSDK = {
       };
     }
   },
-  overwritePropsFnQueueMapSet: function(k, v) {
+  overwritePropsFnQueueMapSet: function(k: string, v: any) {
     if (!window.ecodeSDK.overwritePropsFnQueueMap[k])
       window.ecodeSDK.overwritePropsFnQueueMap[k] = { queue: [] };
     var map = window.ecodeSDK.overwritePropsFnQueueMap[k];
@@ -35,7 +35,7 @@ window.ecodeSDK = {
     window.ecodeSDK.overwritePropsFnQueueMap[k] = map;
     window.ecodeSDK.overwritePropsFnQueueInit();
   },
-  ecodeQueueSort: function(arr) {
+  ecodeQueueSort: function(arr: any[]) {
     var len = arr.length;
     for (var i = 0; i < len; i++) {
       for (var j = 0; j < len - 1 - i; j++) {
