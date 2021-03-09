@@ -1,8 +1,6 @@
 import ViewEditor from './ViewEditor';
-import './ecodeSDK';
-
 export { default as ViewEditor } from './ViewEditor';
-export { default as useCode } from './useCode';
-export { useControls } from 'leva';
+export { default as useRewrite } from './useRewrite';
+export { useControls as useControl } from 'leva';
 
 export default ViewEditor;

@@ -9,14 +9,11 @@ You can import to your app with default export.
 import React from 'react';
 import { Layout, Menu, Breadcrumb } from 'antd';
 import { ViewEditor } from 'antd-gui';
-import { useControls } from 'leva';
 import 'antd/dist/antd.css';
 
 const { Header, Content, Footer } = Layout;
 
 export default () => {
-  const { name, aNumber } = useControls({ name: 'World', aNumber: 0 });
-
   return (
     <>
       <Layout className="layout">
@@ -39,9 +36,6 @@ export default () => {
               <div ref={ref} className="site-layout-content">
                 <h1>Hello CodeSandbox</h1>
                 <h2>Start editing to see some magic happen!</h2>
-                <div>
-                  Hey {name}, hello! {aNumber}
-                </div>
               </div>
             )}
           </ViewEditor>

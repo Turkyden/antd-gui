@@ -1,4 +1,4 @@
-## Button 按钮
+## useControl
 
 You can import to your app with default export.
 
@@ -7,11 +7,12 @@ You can import to your app with default export.
  * defaultShowCode: true
  */
 import React from 'react';
-import { ViewEditor, useControls, useCode } from 'antd-gui';
+import { useControl } from 'antd-gui';
+import { Button } from 'antd';
 import 'antd/dist/antd.css';
 
 export default () => {
-  const newProps = useControls({
+  const props = useControl({
     block: false,
     danger: false,
     disaled: false,
@@ -35,24 +36,10 @@ export default () => {
     },
   });
 
-  const Button = useCode('Button', oldProps => {
-    // update the props of your component
-    return {
-      ...oldProps,
-      ...newProps,
-    };
-  });
-
   return (
-    <>
-      <div className="App">
-        <div>
-          <Button onClick={(e: Event) => window.alert('Hello World !')}>
-            Button
-          </Button>
-        </div>
-      </div>
-    </>
+    <Button {...props} onClick={e => window.alert('Hello World !')}>
+      Button
+    </Button>
   );
 };
 ```
