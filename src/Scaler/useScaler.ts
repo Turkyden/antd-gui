@@ -11,7 +11,7 @@ export default function useScaler(initial: number): [number, Action] {
   const [scale, setScale] = useState(initial);
 
   useEffect(() => {
-    const handlePreventWindowEvent = (event: WheelEvent) => {
+    const handlePreventWindowEvent = (event: any) => {
       if (event.ctrlKey === true || event.metaKey) {
         event.preventDefault();
       }

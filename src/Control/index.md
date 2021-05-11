@@ -7,7 +7,7 @@
  * transform: true
  */
 import React from 'react';
-import Control from './index.tsx';
+import { Control } from 'antd-gui';
 
 export default () => (
   <div className="h-96">

@@ -1,11 +1,6 @@
-import { useEffect } from 'react';
+import React from 'react';
 import Draggable from 'react-draggable';
-import {
-  PlusOutlined,
-  MinusOutlined,
-  InsertRowBelowOutlined,
-  ReloadOutlined,
-} from '@ant-design/icons';
+import { PlusOutlined, MinusOutlined, ReloadOutlined } from '@ant-design/icons';
 
 export default function Scaler({
   scale,
