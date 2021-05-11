@@ -1,6 +1,6 @@
 {
   "name": "antd-gui",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A React Hook for adding a dark / night mode to your site inspired by darkreader",
   "keywords": [
     "react",
